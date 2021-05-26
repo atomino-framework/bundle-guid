@@ -1,7 +1,7 @@
-<?php namespace Atomino\Molecules\EntityPlugin\Guid;
+<?php namespace Atomino\Carbon\Plugins\Guid;
 
-use Atomino\Entity\Generator\CodeWriter;
-use Atomino\Entity\Plugin\Plugin;
+use Atomino\Carbon\Generator\CodeWriter;
+use Atomino\Carbon\Plugin\Plugin;
 
 #[\Attribute(\Attribute::TARGET_CLASS)]
 class Guid extends Plugin{
