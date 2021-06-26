@@ -1,5 +1,6 @@
 {
     "name": "atomino/bundle-guid",
+    "license": "MIT",
     "authors": [
         {
             "name": "laborci",
