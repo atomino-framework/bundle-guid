@@ -7,9 +7,9 @@ use Atomino\Carbon\Plugin\Plugin;
 class Guid extends Plugin{
 	public function __construct(public string $field = "guid"){ }
 	public function generate(\ReflectionClass $ENTITY, CodeWriter $codeWriter){
-		$codeWriter->addAnnotation("#[Immutable( '" . $this->field . "', true )]");
-		$codeWriter->addAnnotation("#[Protect( '" . $this->field . "', true, false )]");
-		$codeWriter->addAnnotation("#[RequiredField('" . $this->field . "', StringField::class)]");
+		$codeWriter->addAttribute("#[Immutable( '" . $this->field . "', true )]");
+		$codeWriter->addAttribute("#[Protect( '" . $this->field . "', true, false )]");
+		$codeWriter->addAttribute("#[RequiredField('" . $this->field . "', \Atomino\Carbon\Field\StringField::class)]");
 	}
 	public function getTrait(): string|null{ return GuidTrait::class; }
 }
